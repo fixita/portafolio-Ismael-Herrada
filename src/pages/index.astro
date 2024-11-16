@@ -12,7 +12,10 @@ import Technologies from "../components/Technologies.astro";
 import Sobremi from "../components/Sobremi.astro";
 ---
 
-<Layout title="Portafolio de IsmaDev - Desarrollador y Programdor Web" description="">
+<Layout
+  title="Portafolio de IsmaDev - Desarrollador y Programdor Web"
+  description=""
+>
   <main class="px-8">
     <SectionContainer class="py-44 pb-24">
       <img
@@ -20,20 +23,28 @@ import Sobremi from "../components/Sobremi.astro";
         src="/public/fixita.jpeg"
         alt="ismadev"
       />
-      <h1 class="text-white text-2xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-4">
-        Hola, Soy IsmaDev. <a
-          href="https://www.linkedin.com/in/ismael-herrada-5b6183308/"
-          target="_blank"
-          rel="noopener"></a>
-        <div class="flex justify-center items-center">
-          <Badge>Disponible para trabajar</Badge>
-        </div>
-      </h1>
+      <div class="text-center sm:text-left">
+        <!-- Título -->
+        <h1
+          class="text-white text-2xl md:text-4xl lg:text-5xl font-bold flex flex-col sm:flex-row gap-x-4 pb-4 items-center sm:items-start"
+        >
+          Hola, Soy IsmaDev.
+          <div
+            class="flex justify-center sm:justify-start items-center mt-2 sm:mt-5"
+          >
+            <Badge>Disponible para trabajar</Badge>
+          </div>
+        </h1>
 
-      <h2 class="text-xl text-white lg:text-2xl opacity-80 text-wrap max-w-[700px]">
-        Experiencia como desarrollador Full Stack y Apasionado por el Frontend.
-        De Santiago de Chile. Apasionado por crear interfaces minimalistas.
-      </h2>
+        <!-- Subtítulo -->
+        <h2
+          class="text-lg md:text-xl lg:text-2xl text-white opacity-80 max-w-[700px] mx-auto sm:mx-0"
+        >
+          Experiencia como desarrollador Full Stack y Apasionado por el
+          Frontend. De Santiago de Chile. Apasionado por crear interfaces
+          minimalistas.
+        </h2>
+      </div>
 
       <nav class="flex gap-4 mt-4 flex-wrap">
         <SocialPill
@@ -52,7 +63,7 @@ import Sobremi from "../components/Sobremi.astro";
           href="https://www.linkedin.com/in/ismael-herrada-5b6183308/"
         >
           <MailIcon class="size-4 md:size-6" />
-          Ismaismael357@gmail.com
+          ismaelignaciohe@gmail.com
         </SocialPill>
         <SocialPill
           href="https://www.linkedin.com/in/ismael-herrada-5b6183308/"
@@ -64,19 +75,24 @@ import Sobremi from "../components/Sobremi.astro";
     </SectionContainer>
 
     <SectionContainer id="experiencia">
-      <h2 class="text-white mb-6 font-bold flex gap-x-2 items-center">Experiencia Laboral</h2>
-      <Experience/>
+      <h2 class="text-white mb-6 font-bold flex gap-x-2 items-center">
+        Experiencia Laboral
+      </h2>
+      <Experience />
     </SectionContainer>
 
     <SectionContainer id="sobremi">
-      <h2 class="text-white mb-6 font-bold flex gap-x-2 items-center">Sobre Mi</h2>
-      <Sobremi/>
+      <h2 class="text-white mb-6 font-bold flex gap-x-2 items-center">
+        Sobre Mi
+      </h2>
+      <Sobremi />
     </SectionContainer>
 
     <SectionContainer id="tecnologias" class="mt-10">
-      <h2 class="text-white mb-6 font-bold flex gap-x-2 items-center">Tecnologias</h2>
-      <Technologies/>
+      <h2 class="text-white mb-6 font-bold flex gap-x-2 items-center">
+        Tecnologias
+      </h2>
+      <Technologies />
     </SectionContainer>
-
   </main>
 </Layout>
