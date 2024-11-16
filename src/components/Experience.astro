@@ -1,0 +1,29 @@
+---
+import ExperienceItem from "./ExperienceItem.astro";
+
+const EXPERIENCE = [
+  {
+    date: "Febrero 2024",
+    title: "Desarrollador Web - FullStack HSO LUIS TISNE",
+    description: "Migracion de Intranet HSO PHP -> Python Django",
+    link: "#",
+  },
+  {
+    date: "Diciembre 2023",
+    title: "Continuidad Operacional - Empresas SB",
+    description:
+      "Revision Consultas SQL - Desarrollo de Manuales de Autoatencion",
+    link: "#",
+  },
+];
+---
+
+<ol class="relative border-s border-gray-200 dark:border-gray-700">
+    {
+        EXPERIENCE.map((experiencie) => (
+            <li class="mb-10 ms-4">
+                <ExperienceItem {...experiencie} />
+            </li>
+        ))
+    }
+</ol>

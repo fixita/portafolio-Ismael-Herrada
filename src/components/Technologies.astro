@@ -1,0 +1,78 @@
+---
+import PythonIcon from "../components/icons/Python.astro";
+import MySqlIcon from "../components/icons/MySql.astro";
+import JavaScriptIcon from "../components/icons/JavaScript.astro";
+import TypeScriptIcon from "../components/icons/TypeScript.astro";
+import AstroIcon from "../components/icons/Astro.astro";
+import HtmlIcon from "../components/icons/Html.astro";
+import CssIcon from "../components/icons/Css.astro";
+import TailwindIcon from "../components/icons/Tailwind.astro";
+import AngularIcon from "../components/icons/Angular.astro";
+import FigmaIcon from "../components/icons/Figma.astro";
+
+const TECHNOLOGIES = [
+  {
+    title: 'Python',
+    image: PythonIcon, // Usa el componente de icono correspondiente a Python
+    type: 'Language'
+  },
+  {
+    title: 'Angular',
+    image: AngularIcon, // Usa el componente de icono correspondiente a Python
+    type: 'Language'
+  },
+  {
+    title: 'JavaScript',
+    image: JavaScriptIcon, // Cambia por el icono correspondiente a JavaScript
+    type: 'Language'
+  },
+  {
+    title: 'TypeScript',
+    image: TypeScriptIcon, // Cambia por el icono correspondiente a TypeScript
+    type: 'Language'
+  },
+  {
+    title: 'Astro',
+    image: AstroIcon, // Cambia por el icono correspondiente a Astro
+    type: 'Framework'
+  },
+  {
+    title: 'HTML',
+    image: HtmlIcon, // Cambia por el icono correspondiente a HTML
+    type: 'Markup'
+  },
+  {
+    title: 'CSS',
+    image: CssIcon, // Cambia por el icono correspondiente a CSS
+    type: 'StyleSheet'
+  },
+  {
+    title: 'MySQL',
+    image: MySqlIcon, // Cambia por el icono correspondiente a MySQL
+    type: 'Database'
+  },
+  {
+    title: 'TailwindCSS',
+    image: TailwindIcon, // Cambia por el icono correspondiente a MySQL
+    type: 'StyleSheet'
+  },
+  {
+    title: 'Figma',
+    image: FigmaIcon, // Cambia por el icono correspondiente a MySQL
+    type: 'UI'
+  }
+];
+---
+
+<div class="grid grid-cols-3 sm:grid-cols-2 lg:grid-cols-4 gap-6 w-full max-w-lg ">
+  {TECHNOLOGIES.map((tech) => (
+    <div class="flex flex-col items-center hover:scale-110 transition">
+      <!-- Renderiza el ícono de la tecnología -->
+      <tech.image class="w-16 h-16 mb-3" alt={`${tech.title} logo`} />
+
+      <!-- Título y tipo de la tecnología -->
+      <h5 class="text-lg font-semibold text-white dark:text-white mb-1">{tech.title}</h5>
+      <span class="text-xs font-medium text-gray-500 bg-gray-100 px-2 py-1 rounded-full dark:bg-gray-700 dark:text-gray-300">{tech.type}</span>
+    </div>
+  ))}
+</div>
